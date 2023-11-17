@@ -1,0 +1,18 @@
+BLE Practical 101:
+
+1. Ubertooth Spectrum Analyzer
+Command: ubertooth-specan-ui
+
+2. Intercepting Lower Address Part (LAP) Packets
+Command: ubertooth-rx
+
+3. HCI tool to discover devices
+Command: sudo hcitool lescan
+
+4. The Ubertooth-BTLE Tool
+Command: ubertooth-btle -f <BD_ADDR>
+
+5. Route traffic via wireshark
+mkfifo /tmp/pipe
+Create New interface in wireshark: Manage interfaces > Tab 'Pipes' > Click '+' > Browse and add the pipe file created > 'OK'
+Command: ubertooth-btle -f <BD_ADDR> -c /tmp/pipe
